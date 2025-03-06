@@ -1,66 +1,73 @@
-# Teste Técnico Front-end BeTalent
+# BeTalent Funcionários - Painel Administrativo
 
-Este é um repositório para Testes Técnicos em Front-end da Be. Ele é destinado a pessoas que participam de nossos processos seletivos. 
+## Sobre o Projeto
 
-Se você chegou até aqui por meio de um formulário de Teste Técnico, siga em frente. Caso contrário, acompanhe a BeTalent no [Linkedin](https://www.linkedin.com/company/betalenttech), [Instagram](https://www.instagram.com/betalent.tech/), [Facebook](https://web.facebook.com/bemobile.tech) ou na nossa newsletter [BeTalent Academy]([https://t.me/be_tech_community](https://beacademy.substack.com/)). Divulgamos novos processos seletivos por lá.
+Este projeto é um painel administrativo desenvolvido em React com Typescript e Tailwind CSS (versão 4) para visualizar e pesquisar informações dos funcionários da BeTalent. Ele apresenta os dados em uma tabela organizada e oferece funcionalidades de busca por nome, cargo ou telefone. O design é responsivo, garantindo uma boa experiência em diversos dispositivos.
 
-## Desafio
+**Funcionalidades:**
 
-O Teste Técnico para Front-End da BeTalent consiste em construir a visualização de uma tabela com dados que virão de uma API simulada, em json-server.
+- **Visualização de Funcionários:** Exibe uma tabela com informações detalhadas de cada funcionário.
+- **Pesquisa:** Permite pesquisar funcionários por nome, cargo ou telefone.
+- **Design Responsivo:** Adapta-se a diferentes tamanhos de tela para uma visualização otimizada.
+- **Tecnologias:** Construído com React, Typescript e Tailwind CSS (v4) para um desenvolvimento moderno e eficiente.
 
-### Mockup
+## Pré-requisitos
 
-Este é o [projeto em Figma](https://www.figma.com/file/yw6th52zE9bubewc6ayTg5/Teste-T%C3%A9cnico-Front-End-Be.?type=design&node-id=1%3A4&mode=dev&t=vVxs9eyKybrYmq4Z-1) para você se orientar. Nele, você encontrará estilos, visualização desktop e mobile e outros padrões que deverá seguir.
+Antes de executar a aplicação, certifique-se de ter os seguintes pré-requisitos instalados:
 
-### Requisitos Gerais
+- **Node.js:** (Versão 16 ou superior recomendada) - Necessário para executar o `json-server` e o projeto React.
+- **npm (Node Package Manager):** Geralmente instalado com o Node.js.
 
-Deve-se utilizar React.js ou Vanilla JS (JavaScript puro) para construir o projeto.
+## Instruções para Rodar a Aplicação
 
-É permitido utilizar libs externas, mas recomenda-se que seja o mínimo possível.
+Siga os passos abaixo para configurar e executar o projeto:
 
-A visualização deve ser responsiva.
+1.  **Iniciar o Servidor JSON:**
 
-A tabela deve conter as seguintes colunas:
+    - Abra um terminal e navegue até o diretório raiz do projeto.
+    - Execute o seguinte comando para iniciar o servidor JSON com o arquivo `db.json`:
 
-- imagem (thumb do/a usuário/a);
-- nome;
-- cargo
-- data de admissão;
-- telefone.
+      ```bash
+      json-server --watch db.json --port 3001
+      ```
 
-Também deve ser possível realizar pesquisa na tabela por meio de um input. O input de pesquisa deve permitir filtrar dados por cargo, nome e telefone.
+    **Observação:** O `--port 3001` define a porta em que o json-server irá rodar. Certifique-se de ajustar as configurações do projeto caso altere essa porta.
 
-Datas e telefones devem ser formatadas no front-end e não na API.
+2.  **Iniciar a Aplicação React:**
 
-Tenha instaladas em sua máquina as ferramentas [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/) e [Yarn](https://yarnpkg.com/) (ou outro gerenciador de pacotes de sua preferência) para poder trabalhar no projeto.
+    - Abra um novo terminal (mantenha o terminal do `json-server` rodando).
+    - Navegue até o diretório raiz do projeto (o mesmo do passo anterior).
+    - Execute o seguinte comando para instalar as dependências do projeto:
 
-### Acesso aos dados da API simulada
+      ```bash
+      npm install
+      ```
 
-Para ter acesso aos dados que alimentarão o projeto, faça o seguinte:
+    - Após a instalação das dependências, execute o comando para iniciar a aplicação em modo de desenvolvimento:
 
-1. caso você não tenha, instale o pacote [json-server](https://github.com/typicode/json-server);
-2. clone este repositório do GitHub em sua máquina: [https://github.com/BeMobile/desafio-front-end](https://github.com/BeMobile/desafio-front-end);
-3. entre na pasta do projeto, em sua máquina, e, por meio da linha de comando, execute o comando `json-server --watch db.json`, para consumir a API simulada;
-4. inicie a estrutura e o desenvolvimento do projeto.
+      ```bash
+      npm run dev
+      ```
 
-É necessário deixar o json-server rodando no terminal para que os dados sejam visualizados no projeto.
+    - A aplicação será aberta automaticamente no seu navegador. Se não, procure no terminal a URL local (geralmente `http://localhost:5173` ou similar).
 
-Caso você tenha problemas com o json-server, tente rodá-lo com `npx json-server db.json` ou 
-com `yarn json-server <path>/db.json`, em que `<path>` é o caminho completo até o diretório em que o arquivo db.json está localizado. Se mesmo assim não funcionar, busque ajuda na web.
+## Screenshots
 
-### Critérios de Avaliação
+[Espaço reservado para screenshots do projeto. Aqui você pode mostrar como a aplicação se parece, demonstrando a tabela de funcionários, a funcionalidade de pesquisa e a responsividade em diferentes dispositivos.]
 
-Em ordem de relevância, avaliaremos:
+- **Exemplo:**
 
-1. lógica de programação;
-2. organização (do código e dos arquivos);
-3. CSS do projeto;
-4. README, que deve conter, pelo menos, as seguintes informações: sobre o projeto, pré-requisitos e instruções para rodar a aplicação.
+  ![Tela Principal da Aplicação](link_para_sua_imagem_da_tela_principal.png)
+  _Tela principal exibindo a lista de funcionários._
 
-É um diferencial na avaliação o uso de TypeScript.
+  ![Pesquisa por Nome](link_para_sua_imagem_da_pesquisa_por_nome.png)
+  _Exemplo da pesquisa por nome._
 
-### Envio da Solução
+  ![Versão Mobile](link_para_sua_imagem_da_versao_mobile.png)
+  _Visualização da aplicação em um dispositivo móvel._
 
-O projeto deverá ser hospedado em um repositório no seu GitHub. O link do repositório deverá ser fornecido por meio do formulário de Teste Técnico encaminhado ao seu e-mail. Não serão aceitos links de projetos enviados por outros meios.
+## Informações Adicionais
 
-Demais instruções e regras serão instruídas nos formulários e nas comunicações do processo seletivo do qual você está participando.
+- **Tecnologias Utilizadas:** React, Typescript, Tailwind CSS (v4), json-server
+- **Estrutura de Pastas:** [Você pode adicionar uma breve descrição da estrutura de pastas, se desejar.]
+- **Contribuições:** [Se este projeto é open source ou permite contribuições, adicione informações sobre como contribuir.]
